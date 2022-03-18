@@ -5,26 +5,26 @@ let masterPlay = document.getElementById("masterPlay");
 let progressBar=document.getElementById("progressBar");
 let gif = document.getElementById("gif");
 let title1 = document.getElementById("bottom-title");
-let audio= new Audio('songs/1.mp3');
+let audio= new Audio('1.mp3');
 let songItem = Array.from(document.getElementsByClassName('songItem'));
 let songs=[
   {
-    songName:"warriyo",filePath:"songs/1.mp3",coverPath:"covers/1.jpg"
+    songName:"warriyo",filePath:"1.mp3",coverPath:"1.jpg"
   },
   {
-    songName:"cielo",filePath:"songs/2.mp3",coverPath:"covers/2.jpg"
+    songName:"cielo",filePath:"2.mp3",coverPath:"2.jpg"
   },
   {
-    songName:"def kev",filePath:"songs/3.mp3",coverPath:"covers/3.jpg"
+    songName:"def kev",filePath:"3.mp3",coverPath:"3.jpg"
   },
   {
-    songName:"different heaven",filePath:"songs/4.mp3",coverPath:"covers/4.jpg"
+    songName:"different heaven",filePath:"4.mp3",coverPath:"4.jpg"
   },
   {
-    songName:"me esa kyu hu",filePath:"songs/5.mp3",coverPath:"covers/5.jpg"
+    songName:"me esa kyu hu",filePath:"5.mp3",coverPath:"5.jpg"
   },
   {
-    songName:"me esa kyu hu",filePath:"songs/6.mp3",coverPath:"covers/6.jpg"
+    songName:"me esa kyu hu",filePath:"6.mp3",coverPath:"6.jpg"
   }
 ]
 
@@ -109,7 +109,7 @@ document.getElementById("previous").addEventListener('click',function(){
   else
   songIndex-=1;
   // console.log('title');
-  audio.src = 'songs/'+songIndex+'.mp3';//'songs/${index}.mp3';
+  audio.src = songIndex+'.mp3';//'${index}.mp3';
   audio.currentTime=0;
   audio.play();
   title1.innerText = songs[songIndex].songName;
