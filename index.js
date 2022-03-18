@@ -1,4 +1,5 @@
 console.log("welcome to spotify");
+console.log("working");
 // initialise the variables
 let songIndex=0;
 let masterPlay = document.getElementById("masterPlay");
