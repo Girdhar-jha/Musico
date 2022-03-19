@@ -1,12 +1,11 @@
 console.log("welcome to spotify");
-console.log("working");
 // initialise the variables
 let songIndex=0;
 let masterPlay = document.getElementById("masterPlay");
 let progressBar=document.getElementById("progressBar");
 let gif = document.getElementById("gif");
 let title1 = document.getElementById("bottom-title");
-let audio= new Audio('songs/1.mp3');
+let audio= new Audio('1.mp3');
 
 let songItem = Array.from(document.getElementsByClassName('songItem'));
 let songs=[
@@ -121,7 +120,7 @@ Array.from(document.getElementsByClassName("ok")).forEach(function(element){
     title1.innerText=songs[songIndex].songName;
     e.target.classList.remove("fa-play");
     e.target.classList.add("fa-pause");
-    audio.src = 'songs/'+songIndex+'.mp3';//'songs/${index}.mp3';
+    audio.src = songIndex+'.mp3';//'songs/${index}.mp3';
     audio.currentTime=0;
     audio.play();
   playBar();
@@ -140,7 +139,7 @@ document.getElementById("next").addEventListener('click',function(){
   if(songIndex>6)
   {
     songIndex=1;
-  audio.src = songIndex+'.mp3';//'${index}.mp3';
+  audio.src =songIndex+'.mp3';//'songs/${index}.mp3';
   }
   else
   audio.src = songIndex+'.mp3';
@@ -164,7 +163,7 @@ document.getElementById("previous").addEventListener('click',function(){
   if(songIndex<=0)
   {
     songIndex=6;
-  audio.src = songIndex+'.mp3';//'${index}.mp3';
+  audio.src =songIndex+'.mp3';//'songs/${index}.mp3';
 }
 else
 audio.src = songIndex+'.mp3';
